@@ -1,10 +1,10 @@
 const express = require('express');
 const { Client } = require('pg');
 const app = express();
-const port = 5000;
+const port = 5001;
 
 const dbClient = new Client({
-  host: process.env.DB_HOST || 'localhost',
+  host: process.env.DB_HOST || 'db',
   user: process.env.DB_USER || 'postgres',
   password: process.env.DB_PASSWORD || 'postgres',
   database: process.env.DB_NAME || 'testdb',
